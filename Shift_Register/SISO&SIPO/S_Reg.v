@@ -6,7 +6,7 @@ module S_Reg(output [7:0] Pout, output Sout, input clk, rst, SW, Din);
 	assign Pout = SReg;
 	assign Sout = SReg[7];
 	
-	always@(posedge clk or negedge rst)
+	always@(posedge clk or negedge rst) begin
 		if(!rst)
 			SReg <= 8'd0;
 		else
