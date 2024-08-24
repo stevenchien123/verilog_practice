@@ -1,6 +1,6 @@
 module S_Reg(output [7:0] Pout, output Sout, input clk, rst, SW, Din);
 	reg SReg [7:0];	// Shift Regist itself
-	wire Sin
+	wire Sin;
 	
 	assign Sin = (SW)? SReg[7] : Din;
 	assign Pout = SReg;
